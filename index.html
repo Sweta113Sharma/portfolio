@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sweta Kumari - Full Stack Developer, AI & ML Enthusiast, and Problem Solver. Specializing in React, Flask, and LLM Integrations.">
+    <meta name="keywords" content="Sweta Kumari, Sweta Sharma, Full Stack Developer, AI Developer, Python, Flask, React, TypeScript, Portfolio">
+    <meta name="author" content="Sweta Kumari">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sweta Kumari | Full Stack Developer & AI Enthusiast">
+    <meta property="og:description" content="Explore the portfolio of Sweta Kumari, crafting intelligent, scalable, and user-centric applications.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sweta Kumari | Full Stack Developer & AI Enthusiast">
+    <meta property="twitter:description" content="Explore the portfolio of Sweta Kumari, crafting intelligent, scalable, and user-centric applications.">
+
+    <title>Sweta Kumari | Full Stack & AI Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Decoration Grid/Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-accent">&lt;</span>Sweta<span class="logo-accent"> /&gt;</span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="#contact" class="btn btn-secondary nav-cta">Let's Talk</a>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="status-badge" data-reveal="bottom">
+                    <span class="pulse-dot"></span> Available for Collaboration
+                </div>
+                <h1 class="hero-title" data-reveal="bottom" data-delay="100">
+                    Hi, I'm <span class="text-gradient">Sweta Kumari</span>
+                </h1>
+                <h2 class="hero-subtitle" data-reveal="bottom" data-delay="200">
+                    I am a <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description" data-reveal="bottom" data-delay="300">
+                    "Building the Future, One Algorithm at a Time." Crafting intelligent, scalable, and user-centric web applications and AI agents.
+                </p>
+                <div class="hero-actions" data-reveal="bottom" data-delay="400">
+                    <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+                <div class="hero-socials" data-reveal="bottom" data-delay="500">
+                    <a href="https://github.com/Sweta113Sharma" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/swetasharmaa/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:sweta.dollysharma@gmail.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual" data-reveal="scale">
+                <div class="avatar-wrapper">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-glowing-backdrop"></div>
+                    <img src="assets/profile_avatar.png" alt="Sweta Kumari - Full Stack Developer Avatar" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="section-header" data-reveal="bottom">
+                <span class="section-subtitle">Get to Know Me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual" data-reveal="left">
+                    <div class="glass-card info-card">
+                        <div class="card-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">Sweta Kumari</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Role:</span>
+                            <span class="info-value">Full Stack &amp; AI Developer</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value"><a href="mailto:sweta.dollysharma@gmail.com" class="email-link">sweta.dollysharma@gmail.com</a></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Focus:</span>
+                            <span class="info-value">Scalable Web Apps &amp; Intelligent Agents</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Current:</span>
+                            <span class="info-value">Creating data management tools &amp; ML models</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-details" data-reveal="right">
+                    <p class="about-text">
+                        I am a passionate <strong>Full Stack Developer and AI/ML Enthusiast</strong> who thrives on solving complex computational problems and building user-centric, intelligent applications. My development philosophy revolves around clean architecture, optimized database schemas, and seamless API integrations.
+                    </p>
+                    <p class="about-text">
+                        With hands-on experience spanning multiple frameworks, databases, and AI endpoints (like OpenRouter &amp; LLM Orchestration), I bridge the gap between creative design and algorithmic logic. I love exploring new technological paradigms and continuously expanding my developer toolkit.
+                    </p>
+                    
+                    <!-- Tabs for Education/Interests -->
+                    <div class="about-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="edu">Education &amp; Training</button>
+                            <button class="tab-btn" data-tab="philosophy">My Core Philosophy</button>
+                        </div>
+                        <div class="tab-contents">
+                            <div class="tab-pane active" id="tab-edu">
+                                <ul class="timeline-compact">
+                                    <li>
+                                        <span class="time-dot"></span>
+                                        <span class="time-date">Ongoing / University student</span>
+                                        <h4>Full-Stack &amp; AI Specialist</h4>
+                                        <p>Self-driven learning and specialization in modern JS/TS, Python framework design, and LLM automation pipelines.</p>
+                                    </li>
+                                    <li>
+                                        <span class="time-dot"></span>
+                                        <span class="time-date">Virtual Internships</span>
+                                        <h4>Prodigy Infotech &amp; CodeAlpha</h4>
+                                        <p>Completed project-based software engineering and AI chatbot tasks, building robust API services and dynamic frontends.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="tab-philosophy">
+                                <div class="philosophy-box">
+                                    <div class="philosophy-item">
+                                        <i class="fa-solid fa-code text-gradient"></i>
+                                        <div>
+                                            <h5>Write for Humans, Optimize for Machines</h5>
+                                            <p>Writing clean, self-documenting code that is easy to extend and maintain, while focusing on performance benchmarks.</p>
+                                        </div>
+                                    </div>
+                                    <div class="philosophy-item">
+                                        <i class="fa-solid fa-brain text-gradient"></i>
+                                        <div>
+                                            <h5>AI-Empowered Applications</h5>
+                                            <p>Not just raw code, but designing systems where intelligence adds tangible, context-aware value for the end user.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="section-header" data-reveal="bottom">
+                <span class="section-subtitle">My Toolbox</span>
+                <h2 class="section-title">Skills &amp; Expertise</h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Group 1 -->
+                <div class="glass-card skill-group" data-reveal="bottom">
+                    <div class="skill-group-header">
+                        <div class="icon-box purple-glow"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>React &amp; Hooks</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>TypeScript</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Tailwind CSS</span><span>92%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Modern JS (ES6+)</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 2 -->
+                <div class="glass-card skill-group" data-reveal="bottom" data-delay="100">
+                    <div class="skill-group-header">
+                        <div class="icon-box teal-glow"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>Flask &amp; Python</span><span>88%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>SQLite &amp; Databases</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>RESTful API Design</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Git / GitHub Workflows</span><span>88%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 3 -->
+                <div class="glass-card skill-group" data-reveal="bottom" data-delay="200">
+                    <div class="skill-group-header">
+                        <div class="icon-box violet-glow"><i class="fa-solid fa-brain"></i></div>
+                        <h3>AI &amp; Integrations</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>LLM APIs &amp; Integrations</span><span>92%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>OpenRouter API</span><span>87%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 87%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>AI Chatbot Design</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Prompt Engineering</span><span>94%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 94%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="section-header" data-reveal="bottom">
+                <span class="section-subtitle">My Creative Works</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            
+            <!-- Project Filters -->
+            <div class="project-filters" data-reveal="bottom">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="ai">AI &amp; ML</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: StudyNest (Frontend/AI) -->
+                <div class="project-card" data-category="frontend ai" data-reveal="bottom">
+                    <div class="project-thumbnail">
+                        <!-- Premium CSS Abstract Artwork instead of image -->
+                        <div class="abstract-artwork art-studynest">
+                            <div class="art-ring"></div>
+                            <div class="art-ring"></div>
+                            <div class="art-bars">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <i class="fa-solid fa-graduation-cap artwork-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">OpenRouter API</span>
+                            <span class="tag">AI Tool</span>
+                        </div>
+                        <h3>StudyNest</h3>
+                        <p class="project-desc">An AI-powered syllabus manager and study tracker designed specifically for university students. It organizes learning milestones and schedules studies dynamically based on syllabi upload parsing.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sweta113Sharma/studynest" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: CodeAlpha Chatbot (AI) -->
+                <div class="project-card" data-category="ai" data-reveal="bottom" data-delay="100">
+                    <div class="project-thumbnail">
+                        <div class="abstract-artwork art-chatbot">
+                            <div class="art-pulse"></div>
+                            <div class="art-pulse-delay"></div>
+                            <i class="fa-solid fa-comments artwork-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML / CSS / JS</span>
+                            <span class="tag">LLM Integration</span>
+                            <span class="tag">UX / UI</span>
+                        </div>
+                        <h3>CodeAlpha AI Chatbot</h3>
+                        <p class="project-desc">A responsive AI chatbot client designed for CodeAlpha. Interfaces with neural language models to resolve coding issues, answer inquiries, and provide dynamic chat feedback with a stellar neon console interface.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sweta113Sharma/CodeAlpha_Chatbot" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Data Redundancy Removal System (Backend) -->
+                <div class="project-card" data-category="backend" data-reveal="bottom" data-delay="200">
+                    <div class="project-thumbnail">
+                        <div class="abstract-artwork art-redundancy">
+                            <div class="art-nodes">
+                                <span class="node active"></span>
+                                <span class="node duplicate"></span>
+                                <span class="node active"></span>
+                                <span class="node duplicate"></span>
+                            </div>
+                            <i class="fa-solid fa-database artwork-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                        <h3>Data Redundancy Removal System</h3>
+                        <p class="project-desc">An intelligent service built to sanitize relational database environments. Safely identifies duplicate metrics, calculates storage saving indices, and removes redundancies through high-performance deduplication operations.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sweta113Sharma/data-redundancy-removal-system" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Project Match (Frontend) -->
+                <div class="project-card" data-category="frontend" data-reveal="bottom" data-delay="300">
+                    <div class="project-thumbnail">
+                        <div class="abstract-artwork art-match">
+                            <div class="art-arrows">
+                                <i class="fa-solid fa-arrows-left-right"></i>
+                            </div>
+                            <i class="fa-solid fa-people-arrows artwork-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React Hooks</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <h3>Project Match</h3>
+                        <p class="project-desc">A collaborative developer-project matchmaker tool. Utilizing custom sorting filters, it profiles engineering candidates and links them directly to active open-source projects based on repository tag alignment.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sweta113Sharma/projec-tmatch" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-padding">
+            <div class="section-header" data-reveal="bottom">
+                <span class="section-subtitle">My Timeline</span>
+                <h2 class="section-title">Experience &amp; Internships</h2>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" data-reveal="left">
+                    <div class="timeline-badge"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-period">June 2026 - Present</span>
+                            <span class="timeline-company">Open Source Projects &amp; Systems</span>
+                        </div>
+                        <h3>Full Stack Developer</h3>
+                        <p class="timeline-desc">Building and refining systems such as the **Data Redundancy Removal System** and **StudyNest**, applying structured databases, developing responsive frontends with TypeScript, and integrating modern REST API structures.</p>
+                        <ul class="timeline-points">
+                            <li>Optimized SQL database query metrics, reducing space allocation footprint.</li>
+                            <li>Integrated OpenAI/OpenRouter chat features to offer interactive AI assistance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" data-reveal="right">
+                    <div class="timeline-badge"><i class="fa-solid fa-robot"></i></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-period">Recent Collaboration</span>
+                            <span class="timeline-company">CodeAlpha</span>
+                        </div>
+                        <h3>AI Chatbot Developer (Intern)</h3>
+                        <p class="timeline-desc">Engineered conversational AI structures, optimizing text parsing algorithms and custom prompt flows for user-centric chatbot layouts.</p>
+                        <ul class="timeline-points">
+                            <li>Created custom CSS console themes, facilitating streamlined user testing.</li>
+                            <li>Leveraged API response parsing to structure structured responses in UI.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" data-reveal="left">
+                    <div class="timeline-badge"><i class="fa-solid fa-code"></i></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-period">Prior Milestone</span>
+                            <span class="timeline-company">Prodigy Infotech</span>
+                        </div>
+                        <h3>Software Development Intern</h3>
+                        <p class="timeline-desc">Designed web components and basic algorithmic services. Completed project assignments implementing functional web structures.</p>
+                        <ul class="timeline-points">
+                            <li>Built responsive single page systems with modern layouts.</li>
+                            <li>Adhered to Git workflow methodologies for release packaging.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header" data-reveal="bottom">
+                <span class="section-subtitle">Get in Touch</span>
+                <h2 class="section-title">Let's Collaborate</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info column -->
+                <div class="contact-info-panel" data-reveal="left">
+                    <h3>Interested in hiring me or collaborating?</h3>
+                    <p>I'm always open to discussing new projects, intelligent automation services, API integrations, or software engineering vacancies.</p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email Me</h4>
+                                <a href="mailto:sweta.dollysharma@gmail.com">sweta.dollysharma@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div>
+                                <h4>LinkedIn Connection</h4>
+                                <a href="https://www.linkedin.com/in/swetasharmaa/" target="_blank" rel="noopener noreferrer">swetasharmaa</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India (Available Remote)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-panel" data-reveal="right">
+                    <form id="portfolio-contact-form" class="glass-card contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                            <span class="error-msg">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                            <span class="error-msg">Please enter a valid email</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Project Inquiry" required>
+                            <span class="error-msg">Please enter a subject</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Let's build something awesome..." required></textarea>
+                            <span class="error-msg">Please enter your message</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-accent">&lt;</span>Sweta<span class="logo-accent"> /&gt;</span>
+            </div>
+            <p class="footer-tagline">Building the Future, One Algorithm at a Time.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Sweta113Sharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/swetasharmaa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:sweta.dollysharma@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Sweta Kumari. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Success Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="glass-card modal-content">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out, Sweta will get back to you shortly.</p>
+            <button id="close-modal" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <!-- Core Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
