@@ -6,15 +6,15 @@
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
 
-    /* Color Tokens HSL - Funky Pink & Maroon Theme */
+    /* Color Tokens HSL - Funky Pink & Maroon Theme + Sage Green */
     --bg-primary: hsl(345, 30%, 6%);       /* Extra Deep Maroon Black */
     --bg-secondary: hsl(345, 25%, 10%);     /* Deep Wine */
     --bg-surface: hsla(345, 20%, 14%, 0.7);  /* Glass surface */
     
     --color-primary: hsl(325, 100%, 68%);    /* Hot Neon Pink */
     --color-primary-glow: hsla(325, 100%, 68%, 0.2);
-    --color-secondary: hsl(45, 100%, 60%);   /* Funky Neon Gold/Yellow */
-    --color-secondary-glow: hsla(45, 100%, 60%, 0.2);
+    --color-secondary: hsl(135, 22%, 68%);   /* Funky Sage Green */
+    --color-secondary-glow: hsla(135, 22%, 68%, 0.2);
     --color-accent-maroon: hsl(345, 75%, 35%); /* Deep Maroon contrast */
     
     --text-main: hsl(340, 30%, 96%);        /* Bright Blush White */
@@ -39,8 +39,8 @@ body.light-theme {
     
     --color-primary: hsl(345, 75%, 32%);    /* Bold Maroon (primary in light mode) */
     --color-primary-glow: hsla(345, 75%, 32%, 0.15);
-    --color-secondary: hsl(325, 80%, 48%);  /* Dark Hot Pink */
-    --color-secondary-glow: hsla(325, 80%, 48%, 0.15);
+    --color-secondary: hsl(135, 25%, 40%);  /* Rich Sage Green (secondary in light mode) */
+    --color-secondary-glow: hsla(135, 25%, 40%, 0.15);
     --color-accent-maroon: hsl(340, 20%, 80%); /* Soft Muted Pink/Grey for shadows */
     
     --text-main: hsl(345, 75%, 12%);        /* Deep Maroon Black */
@@ -1482,20 +1482,21 @@ body.light-theme .header {
     to { transform: translateX(15px); }
 }
 
-/* Scroll Revelations */
+/* Scroll Revelations - Elastic Pop-In */
 [data-reveal] {
     opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: scale(0.82) translateY(18px);
+    transition: opacity 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-[data-reveal="bottom"] { transform: translateY(40px); }
-[data-reveal="left"] { transform: translateX(-40px); }
-[data-reveal="right"] { transform: translateX(40px); }
-[data-reveal="scale"] { transform: scale(0.9); }
+[data-reveal="bottom"] { transform: scale(0.82) translateY(22px); }
+[data-reveal="left"] { transform: scale(0.85) translateX(-25px); }
+[data-reveal="right"] { transform: scale(0.85) translateX(25px); }
+[data-reveal="scale"] { transform: scale(0.75); }
 
 [data-reveal].revealed {
     opacity: 1;
-    transform: translate(0) scale(1);
+    transform: scale(1) translate(0);
 }
 
 /* ==========================================================================
