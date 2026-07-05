@@ -6,26 +6,24 @@
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
 
-    /* Color Tokens HSL */
-    --hue-primary: 260;   /* Violet */
-    --hue-secondary: 175; /* Teal */
+    /* Color Tokens HSL - Pink & Maroon Shades */
+    --bg-primary: hsl(345, 25%, 8%);      /* Deep Maroon Slate */
+    --bg-secondary: hsl(345, 25%, 12%);    /* Muted Maroon Slate */
+    --bg-surface: hsla(345, 20%, 16%, 0.6); /* Glass surface */
     
-    --bg-primary: hsl(230, 25%, 7%);
-    --bg-secondary: hsl(230, 25%, 11%);
-    --bg-surface: hsla(230, 25%, 15%, 0.55);
+    --color-primary: hsl(340, 100%, 82%);   /* Baby Pink */
+    --color-primary-glow: hsla(340, 100%, 82%, 0.15);
+    --color-secondary: hsl(330, 85%, 68%);  /* Blush Rose Gold */
+    --color-secondary-glow: hsla(330, 85%, 68%, 0.15);
+    --color-accent-maroon: hsl(345, 65%, 48%); /* Vibrant Maroon */
     
-    --color-primary: hsl(var(--hue-primary), 90%, 65%);
-    --color-primary-glow: hsla(var(--hue-primary), 90%, 65%, 0.15);
-    --color-secondary: hsl(var(--hue-secondary), 85%, 50%);
-    --color-secondary-glow: hsla(var(--hue-secondary), 85%, 50%, 0.15);
+    --text-main: hsl(340, 25%, 94%);       /* Soft Pinkish White */
+    --text-muted: hsl(340, 15%, 72%);      /* Muted Pinkish Grey */
+    --text-inverse: hsl(345, 60%, 12%);    /* Dark Maroon Charcoal (for light buttons) */
     
-    --text-main: hsl(220, 20%, 88%);
-    --text-muted: hsl(220, 15%, 65%);
-    --text-inverse: hsl(230, 25%, 7%);
-    
-    --border-color: hsla(220, 20%, 30%, 0.25);
-    --border-glow: hsla(var(--hue-primary), 90%, 65%, 0.2);
-    --card-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+    --border-color: hsla(340, 20%, 35%, 0.22);
+    --border-glow: hsla(340, 100%, 82%, 0.25);
+    --card-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6);
     --glass-blur: blur(16px);
     
     --transition-speed: 0.3s;
@@ -35,22 +33,22 @@
 
 /* Light Theme Variables */
 body.light-theme {
-    --bg-primary: hsl(220, 20%, 96%);
-    --bg-secondary: hsl(220, 20%, 91%);
-    --bg-surface: rgba(255, 255, 255, 0.65);
+    --bg-primary: hsl(340, 30%, 98%);     /* Creamy White-Pink */
+    --bg-secondary: hsl(340, 25%, 94%);   /* Soft Blush White */
+    --bg-surface: rgba(255, 255, 255, 0.72);
     
-    --color-primary: hsl(var(--hue-primary), 80%, 55%);
-    --color-primary-glow: hsla(var(--hue-primary), 80%, 55%, 0.1);
-    --color-secondary: hsl(var(--hue-secondary), 90%, 40%);
-    --color-secondary-glow: hsla(var(--hue-secondary), 90%, 40%, 0.1);
+    --color-primary: hsl(345, 65%, 45%);   /* Rich Maroon (primary in light mode) */
+    --color-primary-glow: hsla(345, 65%, 45%, 0.1);
+    --color-secondary: hsl(330, 75%, 55%); /* Muted Rose (secondary in light mode) */
+    --color-secondary-glow: hsla(330, 75%, 55%, 0.1);
     
-    --text-main: hsl(230, 25%, 12%);
-    --text-muted: hsl(230, 15%, 45%);
-    --text-inverse: hsl(220, 20%, 96%);
+    --text-main: hsl(345, 60%, 15%);       /* Dark Maroon Charcoal */
+    --text-muted: hsl(345, 20%, 45%);      /* Muted Grey-Maroon */
+    --text-inverse: hsl(340, 30%, 98%);    /* Soft Pinkish White */
     
-    --border-color: rgba(0, 0, 0, 0.08);
-    --border-glow: hsla(var(--hue-primary), 80%, 55%, 0.15);
-    --card-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.1);
+    --border-color: rgba(180, 50, 80, 0.08);
+    --border-glow: hsla(345, 65%, 45%, 0.15);
+    --card-shadow: 0 16px 32px -12px rgba(180, 50, 80, 0.12);
 }
 
 /* ==========================================================================
@@ -752,21 +750,21 @@ body.light-theme .header {
 }
 
 .purple-glow {
-    background: hsla(260, 90%, 65%, 0.1);
+    background: hsla(340, 100%, 82%, 0.1);
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
 }
 
 .teal-glow {
-    background: hsla(175, 85%, 50%, 0.1);
-    border: 1px solid var(--color-secondary);
-    color: var(--color-secondary);
+    background: hsla(345, 65%, 48%, 0.1);
+    border: 1px solid var(--color-accent-maroon);
+    color: var(--color-accent-maroon);
 }
 
 .violet-glow {
-    background: hsla(280, 85%, 55%, 0.1);
-    border: 1px solid hsl(280, 85%, 55%);
-    color: hsl(280, 85%, 55%);
+    background: hsla(330, 85%, 68%, 0.1);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
 }
 
 .skill-group h3 {
@@ -874,7 +872,7 @@ body.light-theme .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, hsl(230, 25%, 15%) 0%, hsl(230, 25%, 5%) 100%);
+    background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
     overflow: hidden;
 }
 
@@ -889,7 +887,7 @@ body.light-theme .header {
 
 /* Specific art layouts */
 .art-studynest {
-    background: radial-gradient(circle at top right, hsla(var(--hue-primary), 90%, 65%, 0.15), transparent 60%);
+    background: radial-gradient(circle at top right, var(--color-primary-glow), transparent 60%);
 }
 .art-studynest .art-ring {
     position: absolute;
@@ -916,7 +914,7 @@ body.light-theme .header {
 .art-studynest .art-bars span:nth-child(3) { height: 25px; animation-delay: 0.7s; }
 
 .art-chatbot {
-    background: radial-gradient(circle at bottom left, hsla(var(--hue-secondary), 85%, 50%, 0.15), transparent 65%);
+    background: radial-gradient(circle at bottom left, var(--color-secondary-glow), transparent 65%);
 }
 .art-chatbot .art-pulse {
     position: absolute;
@@ -939,7 +937,7 @@ body.light-theme .header {
 }
 
 .art-redundancy {
-    background: radial-gradient(circle at bottom right, hsla(280, 85%, 55%, 0.15), transparent 70%);
+    background: radial-gradient(circle at bottom right, var(--color-primary-glow), transparent 70%);
 }
 .art-redundancy .art-nodes {
     position: absolute;
@@ -966,7 +964,7 @@ body.light-theme .header {
 }
 
 .art-match {
-    background: radial-gradient(circle at top left, hsla(var(--hue-primary), 90%, 65%, 0.15), transparent 60%);
+    background: radial-gradient(circle at top left, var(--color-primary-glow), transparent 60%);
 }
 .art-match .art-arrows {
     position: absolute;
