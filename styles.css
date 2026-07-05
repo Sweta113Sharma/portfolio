@@ -442,6 +442,37 @@ body.light-theme .header {
     padding-right: 5px; /* space for italic lean */
 }
 
+/* Tagline Quote Card (Neo-Brutalism Style) */
+.tagline-quote {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-secondary);
+    border: 3px solid var(--text-main);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px var(--color-accent-maroon);
+    margin: 10px 0;
+    max-width: fit-content;
+}
+
+.quote-mark {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-primary);
+}
+
+.quote-text {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
 /* 
   If you prefer a cursive handwriting style for your name instead of the elegant serif,
   uncomment the style below and comment out the .name-font style above:
