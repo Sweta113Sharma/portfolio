@@ -6,49 +6,50 @@
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
 
-    /* Color Tokens HSL - Pink & Maroon Shades */
-    --bg-primary: hsl(345, 25%, 8%);      /* Deep Maroon Slate */
-    --bg-secondary: hsl(345, 25%, 12%);    /* Muted Maroon Slate */
-    --bg-surface: hsla(345, 20%, 16%, 0.6); /* Glass surface */
+    /* Color Tokens HSL - Funky Pink & Maroon Theme */
+    --bg-primary: hsl(345, 30%, 6%);       /* Extra Deep Maroon Black */
+    --bg-secondary: hsl(345, 25%, 10%);     /* Deep Wine */
+    --bg-surface: hsla(345, 20%, 14%, 0.7);  /* Glass surface */
     
-    --color-primary: hsl(340, 100%, 82%);   /* Baby Pink */
-    --color-primary-glow: hsla(340, 100%, 82%, 0.15);
-    --color-secondary: hsl(330, 85%, 68%);  /* Blush Rose Gold */
-    --color-secondary-glow: hsla(330, 85%, 68%, 0.15);
-    --color-accent-maroon: hsl(345, 65%, 48%); /* Vibrant Maroon */
+    --color-primary: hsl(325, 100%, 68%);    /* Hot Neon Pink */
+    --color-primary-glow: hsla(325, 100%, 68%, 0.2);
+    --color-secondary: hsl(45, 100%, 60%);   /* Funky Neon Gold/Yellow */
+    --color-secondary-glow: hsla(45, 100%, 60%, 0.2);
+    --color-accent-maroon: hsl(345, 75%, 35%); /* Deep Maroon contrast */
     
-    --text-main: hsl(340, 25%, 94%);       /* Soft Pinkish White */
-    --text-muted: hsl(340, 15%, 72%);      /* Muted Pinkish Grey */
-    --text-inverse: hsl(345, 60%, 12%);    /* Dark Maroon Charcoal (for light buttons) */
+    --text-main: hsl(340, 30%, 96%);        /* Bright Blush White */
+    --text-muted: hsl(340, 15%, 76%);       /* Muted Blush Grey */
+    --text-inverse: hsl(345, 75%, 10%);     /* Deep Charcoal Maroon (readability on Pink) */
     
-    --border-color: hsla(340, 20%, 35%, 0.22);
-    --border-glow: hsla(340, 100%, 82%, 0.25);
-    --card-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6);
+    --border-color: var(--text-main);
+    --border-glow: var(--color-primary);
+    --card-shadow: 6px 6px 0px var(--color-accent-maroon);
     --glass-blur: blur(16px);
     
     --transition-speed: 0.3s;
-    --border-radius: 16px;
+    --border-radius: 12px;
     --max-width: 1200px;
 }
 
 /* Light Theme Variables */
 body.light-theme {
-    --bg-primary: hsl(340, 30%, 98%);     /* Creamy White-Pink */
-    --bg-secondary: hsl(340, 25%, 94%);   /* Soft Blush White */
-    --bg-surface: rgba(255, 255, 255, 0.72);
+    --bg-primary: hsl(340, 40%, 98%);      /* Creamy White-Pink */
+    --bg-secondary: hsl(340, 30%, 94%);    /* Soft Pink-White */
+    --bg-surface: rgba(255, 255, 255, 0.8);
     
-    --color-primary: hsl(345, 65%, 45%);   /* Rich Maroon (primary in light mode) */
-    --color-primary-glow: hsla(345, 65%, 45%, 0.1);
-    --color-secondary: hsl(330, 75%, 55%); /* Muted Rose (secondary in light mode) */
-    --color-secondary-glow: hsla(330, 75%, 55%, 0.1);
+    --color-primary: hsl(345, 75%, 32%);    /* Bold Maroon (primary in light mode) */
+    --color-primary-glow: hsla(345, 75%, 32%, 0.15);
+    --color-secondary: hsl(325, 80%, 48%);  /* Dark Hot Pink */
+    --color-secondary-glow: hsla(325, 80%, 48%, 0.15);
+    --color-accent-maroon: hsl(340, 20%, 80%); /* Soft Muted Pink/Grey for shadows */
     
-    --text-main: hsl(345, 60%, 15%);       /* Dark Maroon Charcoal */
-    --text-muted: hsl(345, 20%, 45%);      /* Muted Grey-Maroon */
-    --text-inverse: hsl(340, 30%, 98%);    /* Soft Pinkish White */
+    --text-main: hsl(345, 75%, 12%);        /* Deep Maroon Black */
+    --text-muted: hsl(345, 30%, 35%);       /* Muted Maroon-Grey */
+    --text-inverse: hsl(340, 40%, 98%);     /* Creamy White-Pink */
     
-    --border-color: rgba(180, 50, 80, 0.08);
-    --border-glow: hsla(345, 65%, 45%, 0.15);
-    --card-shadow: 0 16px 32px -12px rgba(180, 50, 80, 0.12);
+    --border-color: var(--text-main);
+    --border-glow: var(--color-primary);
+    --card-shadow: 6px 6px 0px var(--color-accent-maroon);
 }
 
 /* ==========================================================================
@@ -183,21 +184,22 @@ body.light-theme .grid-overlay {
         linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px);
 }
 
-/* Glassmorphism Cards */
+/* Neo-brutalism Cards */
 .glass-card {
     background: var(--bg-surface);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--border-color);
+    border: 3px solid var(--text-main);
     border-radius: var(--border-radius);
     padding: 30px;
-    box-shadow: var(--card-shadow);
+    box-shadow: 6px 6px 0px var(--color-accent-maroon);
     transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .glass-card:hover {
-    border-color: var(--border-glow);
-    box-shadow: 0 20px 40px -15px var(--color-primary-glow);
+    border-color: var(--color-primary);
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--color-primary);
 }
 
 /* Custom Buttons */
@@ -208,47 +210,50 @@ body.light-theme .grid-overlay {
     padding: 12px 28px;
     font-family: var(--font-heading);
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 30px;
     cursor: pointer;
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
+    border: 3px solid var(--text-main);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary), hsl(var(--hue-primary), 90%, 55%));
+    background: var(--color-primary);
     color: var(--text-inverse);
-    box-shadow: 0 8px 24px -6px var(--color-primary-glow);
+    box-shadow: 4px 4px 0px var(--color-accent-maroon);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px -4px var(--color-primary-glow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-accent-maroon);
 }
 
 .btn-secondary {
     background: var(--bg-surface);
-    border: 1px solid var(--border-color);
     color: var(--text-main);
     backdrop-filter: var(--glass-blur);
+    box-shadow: 4px 4px 0px var(--color-accent-maroon);
 }
 
 .btn-secondary:hover {
     border-color: var(--color-secondary);
     color: var(--color-secondary);
-    transform: translateY(-2px);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-secondary);
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--color-primary);
+    border: 3px solid var(--color-primary);
     color: var(--text-main);
+    box-shadow: 4px 4px 0px var(--color-primary-glow);
 }
 
 .btn-outline:hover {
     background: var(--color-primary);
     color: var(--text-inverse);
-    transform: translateY(-3px);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-primary);
 }
 
 /* ==========================================================================
@@ -262,22 +267,22 @@ body.light-theme .grid-overlay {
     width: 90%;
     max-width: var(--max-width);
     height: 70px;
-    background: hsla(230, 25%, 10%, 0.7);
+    background: hsla(345, 25%, 10%, 0.85);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--border-color);
-    border-radius: 40px;
+    border: 3px solid var(--text-main);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     z-index: 100;
-    box-shadow: var(--card-shadow);
+    box-shadow: 4px 4px 0px var(--color-accent-maroon);
     transition: all var(--transition-speed) ease;
 }
 
 body.light-theme .header {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .header.scrolled {
@@ -862,19 +867,19 @@ body.light-theme .header {
     background: var(--bg-surface);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--border-color);
+    border: 3px solid var(--text-main);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--card-shadow);
+    box-shadow: 6px 6px 0px var(--color-accent-maroon);
     display: flex;
     flex-direction: column;
     transition: all var(--transition-speed) ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--border-glow);
-    box-shadow: 0 25px 50px -15px var(--color-primary-glow);
+    transform: translate(-4px, -4px);
+    border-color: var(--color-primary);
+    box-shadow: 10px 10px 0px var(--color-primary);
 }
 
 .project-thumbnail {

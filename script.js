@@ -90,10 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
        ----------------------------------------- */
     const typewriterElement = document.getElementById('typewriter');
     const words = [
-        "Full Stack Developer.",
-        "AI & ML Enthusiast.",
-        "Problem Solver.",
-        "Lifelong Learner."
+        "Full Stack Wizard 🧙‍♀️",
+        "AI Prompt Whisperer 🤖",
+        "Boba Tea Powered Coder 🧋",
+        "Aesthetic Web Artisan ✨",
+        "Problem Solver 🧩"
     ];
     let wordIndex = 0;
     let charIndex = 0;
