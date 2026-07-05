@@ -429,6 +429,27 @@ body.light-theme .header {
     letter-spacing: -1.5px;
 }
 
+.name-font {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 5px; /* space for italic lean */
+}
+
+/* 
+  If you prefer a cursive handwriting style for your name instead of the elegant serif,
+  uncomment the style below and comment out the .name-font style above:
+  
+  .name-font {
+      font-family: 'Sacramento', cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 5rem;
+      letter-spacing: 1px;
+  }
+*/
+
 .hero-subtitle {
     font-family: var(--font-heading);
     font-size: 2rem;
