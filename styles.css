@@ -754,6 +754,13 @@ body.light-theme .header {
     font-size: 0.95rem;
 }
 
+.school-name {
+    font-weight: 700;
+    color: var(--color-primary) !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 5px;
+}
+
 /* Philosophy Box */
 .philosophy-box {
     display: flex;
