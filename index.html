@@ -22,7 +22,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fredoka:wght@400;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -69,29 +69,36 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
+            <!-- Giant Bubbly Background Name -->
+            <div class="hero-bg-name">SWETA</div>
+            
             <div class="hero-content">
+                <!-- Floating Handwriting Notes -->
+                <div class="handwritten note-new-here" data-reveal="scale" data-delay="100">Hi. Since you're new here.</div>
+                <div class="handwritten note-tour-guide" data-reveal="scale" data-delay="400">let me be ya tour guide</div>
+                
                 <div class="status-badge" data-reveal="bottom">
                     <span class="pulse-dot"></span> Available for Collaboration
                 </div>
-                <h1 class="hero-title" data-reveal="bottom" data-delay="100">
+                <h1 class="hero-title" data-reveal="bottom" data-delay="200">
                     Hi, I'm <span class="text-gradient name-font">Sweta</span>
                 </h1>
-                <h2 class="hero-subtitle" data-reveal="bottom" data-delay="200">
-                    I am a <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                <h2 class="hero-subtitle" data-reveal="bottom" data-delay="250">
+                    full stack wizard &amp; plant mom
                 </h2>
                 
-                <div class="tagline-quote" data-reveal="bottom" data-delay="250">
+                <div class="tagline-quote" data-reveal="bottom" data-delay="300">
                     <span class="quote-mark">“</span>
-                    <p class="quote-text">Building the Future, One Algorithm at a Time.</p>
+                    <p class="quote-text">Building the future, one algorithm at a time.</p>
                     <span class="quote-mark">”</span>
                 </div>
                 
-                <p class="hero-description" data-reveal="bottom" data-delay="300">
+                <p class="hero-description" data-reveal="bottom" data-delay="350">
                     I write clean backends, design responsive web apps, and orchestrate LLM integrations. Currently focused on database optimization and building intelligent automation workflows.
                 </p>
                 <div class="hero-actions" data-reveal="bottom" data-delay="400">
-                    <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                    <a href="#projects" class="btn btn-primary">view projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">get in touch</a>
                 </div>
                 <div class="hero-socials" data-reveal="bottom" data-delay="500">
                     <a href="https://github.com/Sweta113Sharma" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -101,6 +108,8 @@
             </div>
             <div class="hero-visual" data-reveal="scale">
                 <div class="avatar-wrapper">
+                    <!-- Little handwriting badge next to avatar -->
+                    <div class="handwritten note-this-is-me">this is me!</div>
                     <div class="avatar-ring"></div>
                     <div class="avatar-glowing-backdrop"></div>
                     <img src="assets/profile_avatar.png" alt="Sweta - Full Stack Developer Avatar" class="profile-img">
@@ -591,15 +600,23 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-brand">
-                <span class="logo-accent">&lt;</span>Sweta<span class="logo-accent"> /&gt;</span>
+            <!-- Envelope Graphics Wrapper -->
+            <div class="envelope-wrapper">
+                <div class="envelope-letter">
+                    <p class="letter-text">Thank you so much for taking the time to look through my portfolio! Always open to new opportunities.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/Sweta113Sharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/swetasharmaa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:sweta.dollysharma@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
-            <p class="footer-tagline">Building the Future, One Algorithm at a Time.</p>
-            <div class="footer-socials">
-                <a href="https://github.com/Sweta113Sharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/swetasharmaa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="mailto:sweta.dollysharma@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            
+            <div class="footer-wrap-text">
+                <span class="wrap-sub">and that's</span>
+                <span class="wrap-main">a wrap.</span>
             </div>
+            
             <div class="footer-copyright">
                 <p>&copy; 2026 Sweta. All Rights Reserved.</p>
             </div>

@@ -2,54 +2,54 @@
    CSS VARIABLES & DESIGN SYSTEM (Vanilla CSS)
    ========================================================================== */
 :root {
-    /* Theme Tokens (Dark/Pink Mode Default) */
-    --font-heading: 'Space Grotesk', sans-serif;
+    /* Theme Tokens */
+    --font-heading: 'Fredoka', sans-serif; /* Bubbly Display Font */
     --font-body: 'Outfit', sans-serif;
+    --font-handwritten: 'Caveat', cursive; /* Casual Handwriting Annotation Font */
 
-    /* Color Tokens HSL - Baby Pink Background + Sage Green Mixture (No Maroon) */
-    --bg-primary: hsl(340, 80%, 93%);       /* Soft Baby Pink Background */
-    --bg-secondary: hsl(340, 60%, 88%);     /* Slightly Darker Pastel Pink */
-    --bg-surface: hsla(135, 25%, 92%, 0.65); /* Translucent Sage Green Glass Surface */
+    /* Color Tokens HSL - Sand/Oatmeal, Bubblegum Pink, and Sage Green */
+    --bg-primary: #EAE5DB;       /* Warm Oatmeal Background */
+    --bg-secondary: #E2DDD3;     /* Slightly Darker Sand */
+    --bg-surface: #F7F5F0;       /* Warm Creamy White for Polaroid-like Cards */
     
-    --color-primary: hsl(135, 35%, 32%);     /* Deep Forest/Sage Accent */
-    --color-primary-glow: hsla(135, 35%, 32%, 0.1);
-    --color-secondary: hsl(135, 30%, 42%);   /* Sage Green Accent */
-    --color-secondary-glow: hsla(135, 30%, 42%, 0.15);
-    --color-accent-maroon: hsl(145, 30%, 18%); /* Deep Forest Dark Outline/Shadow (Replaced Maroon) */
+    --color-primary: #E273A8;    /* Bubbly Hot Pink */
+    --color-primary-glow: rgba(226, 115, 168, 0.15);
+    --color-secondary: #8DA08E;  /* Sage Green Accent */
+    --color-secondary-glow: rgba(141, 160, 142, 0.15);
+    --color-accent-maroon: #36332E; /* Deep Charcoal Brown for Borders/Shadows */
     
-    --text-main: hsl(145, 35%, 12%);        /* Deep Forest Black for readability */
-    --text-muted: hsl(145, 15%, 32%);       /* Muted Forest-Grey */
-    --text-inverse: hsl(340, 80%, 95%);     /* Light Baby Pink for primary buttons */
+    --text-main: #36332E;        /* Deep Charcoal Brown */
+    --text-muted: #6B655C;       /* Muted Brownish Grey */
+    --text-inverse: #F7F5F0;     /* Creamy White for Button Text */
     
-    --border-color: var(--text-main);
+    --border-color: #36332E;     /* Outlines */
     --border-glow: var(--color-primary);
-    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow! */
-    --glass-blur: blur(16px);
+    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow */
+    --glass-blur: blur(4px);
     
     --transition-speed: 0.3s;
-    --border-radius: 40px;                  /* Bubbly/Spherical Card Corners! */
+    --border-radius: 40px;       /* Bubbly Card Corners */
     --max-width: 1200px;
 }
 
 /* Light/Sage Theme Variables (Toggled) */
 body.light-theme {
-    --bg-primary: hsl(135, 30%, 92%);      /* Soft Sage Green Background */
-    --bg-secondary: hsl(135, 25%, 86%);    /* Slightly Darker Sage */
-    --bg-surface: hsla(340, 80%, 95%, 0.65); /* Translucent Baby Pink Glass Surface */
+    --bg-primary: #D6E0D7;       /* Soft Sage Green Background */
+    --bg-secondary: #C8D4C9;     /* Slightly Darker Sage */
+    --bg-surface: #FAF0F4;       /* Soft Pink Glass Surface */
     
-    --color-primary: hsl(340, 60%, 45%);    /* Soft Rose/Coral (primary in light mode) */
-    --color-primary-glow: hsla(340, 60%, 45%, 0.1);
-    --color-secondary: hsl(135, 30%, 42%);  /* Sage Green */
-    --color-secondary-glow: hsla(135, 30%, 42%, 0.15);
-    --color-accent-maroon: hsl(135, 25%, 72%); /* Soft Sage shadow */
+    --color-primary: #8DA08E;    /* Sage Green as primary */
+    --color-primary-glow: rgba(141, 160, 142, 0.15);
+    --color-secondary: #E273A8;  /* Pink as secondary */
+    --color-secondary-glow: rgba(226, 115, 168, 0.15);
+    --color-accent-maroon: #2F362F; /* Deep Forest Dark Outline */
     
-    --text-main: hsl(145, 35%, 12%);        /* Deep Forest Black */
-    --text-muted: hsl(145, 20%, 32%);       /* Muted Forest-Grey */
-    --text-inverse: hsl(135, 30%, 92%);     /* Light Sage Green */
+    --border-color: #2F362F;     /* Deep Forest Charcoal outlines */
+    --text-main: #2F362F;        /* Deep Forest Green */
+    --text-muted: #556256;       /* Muted Forest Grey */
+    --text-inverse: #FAF0F4;     /* Soft pink for button text */
     
-    --border-color: var(--text-main);
-    --border-glow: var(--color-primary);
-    --card-shadow: 6px 6px 0px var(--color-primary); /* Rose solid shadow! */
+    --card-shadow: 6px 6px 0px var(--color-secondary); /* Pink solid shadow! */
 }
 
 /* ==========================================================================
@@ -1312,53 +1312,119 @@ body.light-theme .header {
    FOOTER
    ========================================================================== */
 .footer {
-    border-top: 1px solid var(--border-color);
     background: var(--bg-secondary);
-    padding: 60px 5% 40px;
+    padding: 100px 0 60px;
+    border-top: 3px solid var(--border-color);
+    position: relative;
+    overflow: visible;
 }
 
 .footer-container {
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background: var(--bg-surface);
+    border: 3px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 6px 6px 0px var(--color-secondary);
+    transition: transform var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.envelope-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* Inside Letter */
+.envelope-letter {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    background: var(--bg-surface);
+    border: 3px solid var(--border-color);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer-brand {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
+.envelope-wrapper:hover .envelope-letter {
+    transform: translateY(-90px) rotate(-1.5deg);
 }
 
-.footer-tagline {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+.letter-text {
+    font-family: var(--font-handwritten);
+    font-size: 1.8rem;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .footer-socials {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
 .footer-socials a {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    border: 3px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all var(--transition-speed);
+    color: var(--text-main);
 }
 
 .footer-socials a:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
     transform: translateY(-3px);
+}
+
+.footer-wrap-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 0.85;
+}
+
+.wrap-sub {
+    font-family: var(--font-handwritten);
+    font-size: 3.5rem;
+    color: var(--color-primary);
+    transform: rotate(-3deg);
+}
+
+.wrap-main {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-transform: lowercase;
+    letter-spacing: -2px;
 }
 
 .footer-copyright {
@@ -1548,6 +1614,60 @@ body.light-theme .header {
     line-height: 1.6;
     color: var(--text-muted);
     margin: 0;
+}
+
+/* Giant Background Name */
+.hero-bg-name {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 15vw;
+    font-weight: 700;
+    color: var(--color-primary);
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Floating Handwritten Annotations */
+.handwritten {
+    font-family: var(--font-handwritten);
+    color: var(--color-primary);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.note-new-here {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    transform: rotate(-7deg);
+    font-size: 2.5rem;
+    color: var(--text-main);
+}
+
+.note-tour-guide {
+    position: absolute;
+    top: 130px;
+    right: 8%;
+    transform: rotate(5deg);
+    font-size: 2.2rem;
+    color: var(--text-main);
+}
+
+.note-this-is-me {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    transform: rotate(12deg);
+    font-size: 2.4rem;
+    color: var(--color-primary);
 }
 
 /* ==========================================================================
