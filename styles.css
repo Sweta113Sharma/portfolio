@@ -1625,56 +1625,7 @@ body.light-theme .header {
     margin: 0;
 }
 
-/* Floating Collage Stickers */
-.floating-sticker {
-    position: absolute;
-    background: #ffffff;
-    border: 3px solid var(--border-color);
-    padding: 8px 8px 16px;
-    border-radius: 16px;
-    box-shadow: 6px 6px 0px var(--color-accent-maroon);
-    width: 130px;
-    z-index: 10;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    pointer-events: auto;
-}
 
-.floating-sticker img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-}
-
-.sticker-label {
-    font-family: var(--font-handwritten);
-    font-size: 1.3rem;
-    color: var(--text-main);
-    display: block;
-    margin-top: 6px;
-    text-align: center;
-    line-height: 1;
-}
-
-.floating-sticker:hover {
-    transform: scale(1.1) rotate(0deg) !important;
-    box-shadow: 8px 8px 0px var(--color-primary);
-    z-index: 20;
-}
-
-/* Positioning & tilts for stickers */
-.sticker-pothos {
-    right: 4%;
-    top: 15%;
-    transform: rotate(6deg);
-}
-
-.sticker-ivy {
-    left: 2%;
-    top: 60%;
-    transform: rotate(-8deg);
-}
 
 /* Giant Background Name */
 .hero-bg-name {
@@ -1849,10 +1800,6 @@ body.light-theme .header {
     
     .mobile-nav-active .mobile-nav-toggle span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .floating-sticker {
-        display: none;
     }
 }
 
