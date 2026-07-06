@@ -6,19 +6,19 @@
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
 
-    /* Color Tokens HSL - Baby Pink Background + Sage Green Mixture */
+    /* Color Tokens HSL - Baby Pink Background + Sage Green Mixture (No Maroon) */
     --bg-primary: hsl(340, 80%, 93%);       /* Soft Baby Pink Background */
     --bg-secondary: hsl(340, 60%, 88%);     /* Slightly Darker Pastel Pink */
     --bg-surface: hsla(135, 25%, 92%, 0.65); /* Translucent Sage Green Glass Surface */
     
-    --color-primary: hsl(345, 70%, 35%);     /* Deep Maroon for bold highlights/borders */
-    --color-primary-glow: hsla(345, 70%, 35%, 0.1);
+    --color-primary: hsl(135, 35%, 32%);     /* Deep Forest/Sage Accent */
+    --color-primary-glow: hsla(135, 35%, 32%, 0.1);
     --color-secondary: hsl(135, 30%, 42%);   /* Sage Green Accent */
     --color-secondary-glow: hsla(135, 30%, 42%, 0.15);
-    --color-accent-maroon: hsl(345, 60%, 25%); /* Dark Maroon for buttons */
+    --color-accent-maroon: hsl(145, 30%, 18%); /* Deep Forest Dark Outline/Shadow (Replaced Maroon) */
     
-    --text-main: hsl(345, 60%, 15%);        /* Deep Maroon Charcoal for readability */
-    --text-muted: hsl(345, 25%, 35%);       /* Muted Maroon-Grey */
+    --text-main: hsl(145, 35%, 12%);        /* Deep Forest Black for readability */
+    --text-muted: hsl(145, 15%, 32%);       /* Muted Forest-Grey */
     --text-inverse: hsl(340, 80%, 95%);     /* Light Baby Pink for primary buttons */
     
     --border-color: var(--text-main);
@@ -27,7 +27,7 @@
     --glass-blur: blur(16px);
     
     --transition-speed: 0.3s;
-    --border-radius: 12px;
+    --border-radius: 40px;                  /* Bubbly/Spherical Card Corners! */
     --max-width: 1200px;
 }
 
@@ -37,19 +37,19 @@ body.light-theme {
     --bg-secondary: hsl(135, 25%, 86%);    /* Slightly Darker Sage */
     --bg-surface: hsla(340, 80%, 95%, 0.65); /* Translucent Baby Pink Glass Surface */
     
-    --color-primary: hsl(345, 70%, 35%);    /* Deep Maroon */
-    --color-primary-glow: hsla(345, 70%, 35%, 0.1);
+    --color-primary: hsl(340, 60%, 45%);    /* Soft Rose/Coral (primary in light mode) */
+    --color-primary-glow: hsla(340, 60%, 45%, 0.1);
     --color-secondary: hsl(135, 30%, 42%);  /* Sage Green */
     --color-secondary-glow: hsla(135, 30%, 42%, 0.15);
-    --color-accent-maroon: hsl(135, 20%, 75%); /* Soft Sage shadow */
+    --color-accent-maroon: hsl(135, 25%, 72%); /* Soft Sage shadow */
     
-    --text-main: hsl(345, 60%, 15%);        /* Deep Maroon Charcoal */
-    --text-muted: hsl(345, 20%, 38%);       /* Muted Maroon-Grey */
+    --text-main: hsl(145, 35%, 12%);        /* Deep Forest Black */
+    --text-muted: hsl(145, 20%, 32%);       /* Muted Forest-Grey */
     --text-inverse: hsl(135, 30%, 92%);     /* Light Sage Green */
     
     --border-color: var(--text-main);
     --border-glow: var(--color-primary);
-    --card-shadow: 6px 6px 0px var(--color-primary); /* Maroon solid shadow! */
+    --card-shadow: 6px 6px 0px var(--color-primary); /* Rose solid shadow! */
 }
 
 /* ==========================================================================
@@ -171,8 +171,8 @@ ul {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(180, 50, 80, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(180, 50, 80, 0.035) 1px, transparent 1px);
+        linear-gradient(rgba(40, 100, 60, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(40, 100, 60, 0.025) 1px, transparent 1px);
     background-size: 60px 60px;
     z-index: -1;
     pointer-events: none;
@@ -180,8 +180,8 @@ ul {
 
 body.light-theme .grid-overlay {
     background-image: 
-        linear-gradient(rgba(40, 100, 60, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(40, 100, 60, 0.035) 1px, transparent 1px);
+        linear-gradient(rgba(40, 100, 60, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(40, 100, 60, 0.025) 1px, transparent 1px);
 }
 
 /* Neo-brutalism Cards */
@@ -211,7 +211,7 @@ body.light-theme .grid-overlay {
     font-family: var(--font-heading);
     font-size: 0.95rem;
     font-weight: 700;
-    border-radius: 30px;
+    border-radius: 99px; /* Pill Shape Button */
     cursor: pointer;
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     border: 3px solid var(--text-main);
@@ -271,7 +271,7 @@ body.light-theme .grid-overlay {
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border: 3px solid var(--text-main);
-    border-radius: 20px;
+    border-radius: 99px; /* Bubbly Header capsule */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -450,9 +450,9 @@ body.light-theme .header {
     gap: 8px;
     background: var(--bg-secondary);
     border: 3px solid var(--text-main);
-    padding: 10px 20px;
-    border-radius: 12px;
-    box-shadow: 4px 4px 0px var(--color-accent-maroon);
+    padding: 10px 24px;
+    border-radius: 99px; /* Pill Shape */
+    box-shadow: 4px 4px 0px var(--color-secondary);
     margin: 10px 0;
     max-width: fit-content;
 }
@@ -872,13 +872,13 @@ body.light-theme .header {
 
 .filter-btn {
     background: var(--bg-surface);
-    border: 1px solid var(--border-color);
+    border: 3px solid var(--border-color);
     color: var(--text-muted);
     font-family: var(--font-heading);
     padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: 99px; /* Pill Shape filter button */
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     transition: all var(--transition-speed);
 }
 
@@ -1270,10 +1270,10 @@ body.light-theme .header {
 
 .form-group input, .form-group textarea {
     background: var(--bg-primary);
-    border: 1px solid var(--border-color);
+    border: 3px solid var(--border-color);
     color: var(--text-main);
     padding: 12px 16px;
-    border-radius: 8px;
+    border-radius: 20px; /* Rounded Input Fields */
     font-family: var(--font-body);
     font-size: 0.95rem;
     transition: all var(--transition-speed);
