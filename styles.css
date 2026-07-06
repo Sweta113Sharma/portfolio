@@ -433,13 +433,14 @@ body.light-theme .header {
     line-height: 1.1;
     letter-spacing: -1.5px;
 }
-
-.name-font {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+.accent-bold-name {
+    font-family: var(--font-heading);
     font-weight: 700;
-    letter-spacing: 0.5px;
-    padding-right: 5px; /* space for italic lean */
+    color: var(--color-primary); /* Bubblegum Pink */
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: -2px;
+    display: inline-block;
 }
 
 /* Tagline Quote Card (Neo-Brutalism Style) */
