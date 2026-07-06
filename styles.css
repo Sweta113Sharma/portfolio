@@ -1,13 +1,39 @@
 /* ==========================================================================
    CSS VARIABLES & DESIGN SYSTEM (Vanilla CSS)
    ========================================================================== */
-:root {
+:root, body.dark-theme {
     /* Theme Tokens */
     --font-heading: 'Fredoka', sans-serif; /* Bubbly Display Font */
     --font-body: 'Outfit', sans-serif;
     --font-handwritten: 'Caveat', cursive; /* Casual Handwriting Annotation Font */
 
-    /* Color Tokens HSL - Sand/Oatmeal, Bubblegum Pink, and Sage Green */
+    /* Color Tokens HSL - Dark Espresso & Cyber Pink Mode */
+    --bg-primary: #181614;       /* Deep Espresso Black Background */
+    --bg-secondary: #23201D;     /* Slightly Lighter Dark Espresso */
+    --bg-surface: #2C2825;       /* Warm Charcoal Brown for Polaroid-like Cards */
+    
+    --color-primary: #E273A8;    /* Bubbly Neon Hot Pink */
+    --color-primary-glow: rgba(226, 115, 168, 0.25);
+    --color-secondary: #8DA08E;  /* Sage Green Accent */
+    --color-secondary-glow: rgba(141, 160, 142, 0.2);
+    --color-accent-maroon: #181614;
+    
+    --text-main: #F7F5F0;        /* Soft Creamy White for high contrast readability */
+    --text-muted: #A39B92;       /* Muted Sand Grey */
+    --text-inverse: #181614;     /* Deep Dark Espresso for buttons */
+    
+    --border-color: #F7F5F0;     /* Creamy White Outlines */
+    --border-glow: var(--color-primary);
+    --card-shadow: 6px 6px 0px var(--color-primary); /* Pink solid offset shadow! */
+    --glass-blur: blur(4px);
+    
+    --transition-speed: 0.3s;
+    --border-radius: 40px;       /* Bubbly Card Corners */
+    --max-width: 1200px;
+}
+
+/* Light Theme Variables (Toggled) */
+body.light-theme {
     --bg-primary: #EAE5DB;       /* Warm Oatmeal Background */
     --bg-secondary: #E2DDD3;     /* Slightly Darker Sand */
     --bg-surface: #F7F5F0;       /* Warm Creamy White for Polaroid-like Cards */
@@ -16,40 +42,14 @@
     --color-primary-glow: rgba(226, 115, 168, 0.15);
     --color-secondary: #8DA08E;  /* Sage Green Accent */
     --color-secondary-glow: rgba(141, 160, 142, 0.15);
-    --color-accent-maroon: #36332E; /* Deep Charcoal Brown for Borders/Shadows */
+    --color-accent-maroon: #36332E;
     
     --text-main: #36332E;        /* Deep Charcoal Brown */
     --text-muted: #6B655C;       /* Muted Brownish Grey */
     --text-inverse: #F7F5F0;     /* Creamy White for Button Text */
     
-    --border-color: #36332E;     /* Outlines */
-    --border-glow: var(--color-primary);
-    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow */
-    --glass-blur: blur(4px);
-    
-    --transition-speed: 0.3s;
-    --border-radius: 40px;       /* Bubbly Card Corners */
-    --max-width: 1200px;
-}
-
-/* Light/Sage Theme Variables (Toggled) */
-body.light-theme {
-    --bg-primary: #D6E0D7;       /* Soft Sage Green Background */
-    --bg-secondary: #C8D4C9;     /* Slightly Darker Sage */
-    --bg-surface: #FAF0F4;       /* Soft Pink Glass Surface */
-    
-    --color-primary: #8DA08E;    /* Sage Green as primary */
-    --color-primary-glow: rgba(141, 160, 142, 0.15);
-    --color-secondary: #E273A8;  /* Pink as secondary */
-    --color-secondary-glow: rgba(226, 115, 168, 0.15);
-    --color-accent-maroon: #2F362F; /* Deep Forest Dark Outline */
-    
-    --border-color: #2F362F;     /* Deep Forest Charcoal outlines */
-    --text-main: #2F362F;        /* Deep Forest Green */
-    --text-muted: #556256;       /* Muted Forest Grey */
-    --text-inverse: #FAF0F4;     /* Soft pink for button text */
-    
-    --card-shadow: 6px 6px 0px var(--color-secondary); /* Pink solid shadow! */
+    --border-color: #36332E;     /* Deep Charcoal Outlines */
+    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow! */
 }
 
 /* ==========================================================================
@@ -176,17 +176,17 @@ section {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(40, 100, 60, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(40, 100, 60, 0.025) 1px, transparent 1px);
-    background-size: 60px 60px;
-    z-index: -1;
+        linear-gradient(rgba(226, 115, 168, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(226, 115, 168, 0.07) 1px, transparent 1px);
+    background-size: 30px 30px; /* Small tight graph grid paper! */
+    z-index: -2;
     pointer-events: none;
 }
 
 body.light-theme .grid-overlay {
     background-image: 
-        linear-gradient(rgba(40, 100, 60, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(40, 100, 60, 0.025) 1px, transparent 1px);
+        linear-gradient(rgba(141, 160, 142, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(141, 160, 142, 0.15) 1px, transparent 1px);
 }
 
 /* Neo-brutalism Cards */
