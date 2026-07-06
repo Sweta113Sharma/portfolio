@@ -1573,13 +1573,16 @@ body.light-theme .header {
 
 /* Co-Curricular Section */
 .cocurricular-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 40px;
+    justify-content: center;
 }
 
 .activity-card {
+    flex: 1 1 280px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1756,10 +1759,6 @@ body.light-theme .header {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .cocurricular-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
@@ -1836,8 +1835,8 @@ body.light-theme .header {
         grid-template-columns: 1fr;
     }
     
-    .cocurricular-grid {
-        grid-template-columns: 1fr;
+    .activity-card {
+        max-width: 100%;
     }
     
     .mobile-nav-active .mobile-nav-toggle span:nth-child(1) {
