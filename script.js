@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (query.includes('solidity') || query.includes('blockchain') || query.includes('attestr') || query.includes('diablo') || query.includes('hackathon')) {
             response = "At the <strong>Innovate Bharat Hackathon 2026</strong>, Sweta's team (Ctrl+Alt+Diablo) built <strong>Attestr</strong>—a decentralized media authenticator using Solidity smart contracts and AI deepfake detection! 🛡️🔗";
         } else {
-            response = "I'm a simple assistant, but I'd love to help! Ask me about Sweta's <strong>skills</strong>, <strong>projects</strong>, <strong>college</strong>, or her plants! 🤖🌱";
+            response = "I'm Mochi.js, a simple assistant, but I'd love to help! Ask me about Sweta's <strong>skills</strong>, <strong>projects</strong>, <strong>college</strong>, or her plants! 🍡🤖";
         }
         addBotMessage(response);
     }
