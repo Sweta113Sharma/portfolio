@@ -399,17 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ];
             const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
             
-            const facts = [
-                "<strong>Fun fact</strong>: Sweta is currently learning Japanese and has propagated over 10 different pothos plants around her room! 🇯🇵🌱",
-                "<strong>Fun fact</strong>: Sweta's hackathon team (Ctrl+Alt+Diablo) built a full blockchain &amp; AI authenticator called Attestr in under 36 hours! 🛡️🔗",
-                "<strong>Fun fact</strong>: Sweta can write full-stack API routers in Python and debug JavaScript layouts, all powered by a single cup of Boba Tea! 🧋✨"
-            ];
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            
             addBotMessage(randomGreeting);
-            setTimeout(() => {
-                addBotMessage(randomFact);
-            }, 800); // 800ms delay to simulate typing the fun fact!
             return;
         }
 
