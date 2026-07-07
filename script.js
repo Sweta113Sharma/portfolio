@@ -393,9 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Match cheerful greetings
         if (query === 'hi' || query === 'hello' || query === 'hey' || query === 'hola' || query === 'yo' || query.startsWith('hi ') || query.startsWith('hello ')) {
             const greetings = [
-                "Konnichiwa! Hello! Sweta is super happy you're here! 🌸✨ How can I help you today?",
-                "Hey there! Super cheerful hello from Mochi.js! 🍡🤖 Hope your day is going fantastic!",
-                "Aloha! 🌟 Welcome to Sweta's space! I'm ready to chat. What's on your mind?"
+                "Yoooo! Sweta's digital assistant here! 🍡 I was just organizing her codebase, but I'm pausing that to chat with you! What's up? 🚀",
+                "Hey, hey! Welcome to Sweta's portfolio! 🌸 I'm Mochi.js, your tour guide. Ready to explore her projects, college life, or plant propagation? Let's do this! ✨",
+                "Konnichiwa! 🇯🇵 Mochi.js in the house! 🍡 Sweta is currently writing code, but I'm here to answer all your questions. What's on your mind? 🤖",
+                "Oooooh, a visitor! Yay! 🌟 I'm Mochi.js, Sweta's coding companion. Ask me anything about her skills, project details, or what plants she's propagating! 🌿"
             ];
             const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
             
