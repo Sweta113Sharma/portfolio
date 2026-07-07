@@ -955,7 +955,28 @@ body.light-theme .header {
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
 }
 
-/* Specific art layouts */
+/* Attestr Art */
+.art-attestr {
+    background: radial-gradient(circle at center, var(--color-primary-glow), transparent 70%);
+}
+.art-shield-ring {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 2px dashed var(--color-primary);
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
+    opacity: 0.4;
+}
+.art-scanner-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+    animation: scan 4s ease-in-out infinite;
+}
+
 .art-studynest {
     background: radial-gradient(circle at top right, var(--color-primary-glow), transparent 60%);
 }
@@ -1559,6 +1580,11 @@ body.light-theme .header {
 @keyframes pingPong {
     from { transform: translateX(-15px); }
     to { transform: translateX(15px); }
+}
+
+@keyframes scan {
+    0%, 100% { top: 5%; }
+    50% { top: 90%; }
 }
 
 /* Scroll Revelations - Elastic Pop-In */
