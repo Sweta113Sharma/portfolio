@@ -2061,28 +2061,37 @@ body.light-theme .header {
     font-size: 0.95rem;
 }
 
-.chat-close-btn {
-    background: #ff5f56; /* Cute red background */
-    border: 2px solid var(--border-color);
-    color: #ffffff; /* White cross icon */
-    font-size: 0.75rem;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%; /* Circular button */
+.window-dots {
     display: flex;
+    gap: 6px;
     align-items: center;
-    justify-content: center;
+}
+
+.window-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+button.dot {
     cursor: pointer;
-    box-shadow: 2px 2px 0px var(--border-color);
-    transition: all var(--transition-speed);
+    outline: none;
+    box-sizing: border-box;
+    transition: transform var(--transition-speed);
 }
 
-.chat-close-btn:hover {
-    background: #ff3b30; /* Darker red on hover */
-    transform: translate(-1px, -1px);
-    box-shadow: 3px 3px 0px var(--border-color);
+button.dot:hover {
+    transform: scale(1.2);
 }
 
-.chat-close-btn i {
-    pointer-events: none;
+.window-dots .dot.red { background-color: #ff5f56; }
+.window-dots .dot.yellow { background-color: #ffbd2e; }
+.window-dots .dot.green { background-color: #27c93f; }
+
+.window-spacer {
+    width: 54px; /* Matches width of window-dots to center title */
 }

@@ -675,10 +675,13 @@
         <!-- Chat Window Console -->
         <div id="chat-window" class="glass-card chat-window window-console">
             <div class="window-header">
+                <div class="window-dots">
+                    <button id="chat-close" class="dot red" aria-label="Close Chat"></button>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
                 <span class="window-title">mochi.js 🍡</span>
-                <button id="chat-close" class="chat-close-btn" aria-label="Close Chat">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+                <div class="window-spacer"></div>
             </div>
             <div class="window-body chat-body">
                 <div class="chat-messages" id="chat-messages">
@@ -714,6 +717,6 @@
     </div>
 
     <!-- Core Logic -->
-    <script src="script.js?v=2.3"></script>
+    <script src="script.js?v=2.4"></script>
 </body>
 </html>
