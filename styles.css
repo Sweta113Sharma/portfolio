@@ -1,13 +1,42 @@
 /* ==========================================================================
    CSS VARIABLES & DESIGN SYSTEM (Vanilla CSS)
    ========================================================================== */
-:root, body.dark-theme {
+:root, body.light-theme {
     /* Theme Tokens */
     --font-heading: 'Fredoka', sans-serif; /* Bubbly Display Font */
     --font-body: 'Outfit', sans-serif;
     --font-handwritten: 'Caveat', cursive; /* Casual Handwriting Annotation Font */
 
-    /* Color Tokens HSL - Dark Espresso & Cyber Pink Mode */
+    /* Color Tokens HSL - Light Oatmeal Mode */
+    --bg-primary: #EAE5DB;       /* Warm Oatmeal Background */
+    --bg-secondary: #E2DDD3;     /* Slightly Darker Sand */
+    --bg-surface: #F7F5F0;       /* Warm Creamy White for Polaroid-like Cards */
+    
+    --color-primary: #E273A8;    /* Bubbly Hot Pink */
+    --color-primary-glow: rgba(226, 115, 168, 0.15);
+    --color-secondary: #8DA08E;  /* Sage Green Accent */
+    --color-secondary-glow: rgba(141, 160, 142, 0.15);
+    --color-accent-maroon: #36332E; /* Deep Charcoal Brown for Borders/Shadows */
+    
+    --text-main: #36332E;        /* Deep Charcoal Brown */
+    --text-muted: #6B655C;       /* Muted Brownish Grey */
+    --text-inverse: #F7F5F0;     /* Creamy White for Button Text */
+    
+    --border-color: #36332E;     /* Deep Charcoal Outlines */
+    --border-glow: var(--color-primary);
+    
+    --shadow-color: var(--color-accent-maroon); /* Charcoal solid shadow */
+    --shadow-color-hover: var(--color-primary); /* Pink solid shadow on hover */
+    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow! */
+    --glass-blur: blur(4px);
+    
+    --transition-speed: 0.3s;
+    --border-radius: 40px;       /* Bubbly Card Corners */
+    --max-width: 1200px;
+}
+
+/* Dark Theme Variables (Toggled) */
+body.dark-theme {
     --bg-primary: #181614;       /* Deep Espresso Black Background */
     --bg-secondary: #23201D;     /* Slightly Lighter Dark Espresso */
     --bg-surface: #2C2825;       /* Warm Charcoal Brown for Polaroid-like Cards */
@@ -23,33 +52,9 @@
     --text-inverse: #181614;     /* Deep Dark Espresso for buttons */
     
     --border-color: #F7F5F0;     /* Creamy White Outlines */
-    --border-glow: var(--color-primary);
+    --shadow-color: var(--color-primary); /* Hot Pink solid shadow */
+    --shadow-color-hover: var(--color-secondary); /* Sage Green solid shadow on hover */
     --card-shadow: 6px 6px 0px var(--color-primary); /* Pink solid offset shadow! */
-    --glass-blur: blur(4px);
-    
-    --transition-speed: 0.3s;
-    --border-radius: 40px;       /* Bubbly Card Corners */
-    --max-width: 1200px;
-}
-
-/* Light Theme Variables (Toggled) */
-body.light-theme {
-    --bg-primary: #EAE5DB;       /* Warm Oatmeal Background */
-    --bg-secondary: #E2DDD3;     /* Slightly Darker Sand */
-    --bg-surface: #F7F5F0;       /* Warm Creamy White for Polaroid-like Cards */
-    
-    --color-primary: #E273A8;    /* Bubbly Hot Pink */
-    --color-primary-glow: rgba(226, 115, 168, 0.15);
-    --color-secondary: #8DA08E;  /* Sage Green Accent */
-    --color-secondary-glow: rgba(141, 160, 142, 0.15);
-    --color-accent-maroon: #36332E;
-    
-    --text-main: #36332E;        /* Deep Charcoal Brown */
-    --text-muted: #6B655C;       /* Muted Brownish Grey */
-    --text-inverse: #F7F5F0;     /* Creamy White for Button Text */
-    
-    --border-color: #36332E;     /* Deep Charcoal Outlines */
-    --card-shadow: 6px 6px 0px var(--color-secondary); /* Sage Green solid shadow! */
 }
 
 /* ==========================================================================
@@ -179,7 +184,7 @@ section {
         linear-gradient(rgba(226, 115, 168, 0.07) 1px, transparent 1px),
         linear-gradient(90deg, rgba(226, 115, 168, 0.07) 1px, transparent 1px);
     background-size: 30px 30px; /* Small tight graph grid paper! */
-    z-index: -2;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -197,14 +202,14 @@ body.light-theme .grid-overlay {
     border: 3px solid var(--text-main);
     border-radius: var(--border-radius);
     padding: 30px;
-    box-shadow: 6px 6px 0px var(--color-accent-maroon);
+    box-shadow: 6px 6px 0px var(--shadow-color);
     transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .glass-card:hover {
     border-color: var(--color-primary);
     transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0px var(--color-primary);
+    box-shadow: 10px 10px 0px var(--shadow-color-hover);
 }
 
 /* Custom Buttons */
@@ -225,26 +230,26 @@ body.light-theme .grid-overlay {
 .btn-primary {
     background: var(--color-primary);
     color: var(--text-inverse);
-    box-shadow: 4px 4px 0px var(--color-accent-maroon);
+    box-shadow: 4px 4px 0px var(--shadow-color);
 }
 
 .btn-primary:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--color-accent-maroon);
+    box-shadow: 6px 6px 0px var(--shadow-color-hover);
 }
 
 .btn-secondary {
     background: var(--bg-surface);
     color: var(--text-main);
     backdrop-filter: var(--glass-blur);
-    box-shadow: 4px 4px 0px var(--color-accent-maroon);
+    box-shadow: 4px 4px 0px var(--shadow-color);
 }
 
 .btn-secondary:hover {
     border-color: var(--color-secondary);
     color: var(--color-secondary);
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--color-secondary);
+    box-shadow: 6px 6px 0px var(--shadow-color-hover);
 }
 
 .btn-outline {
@@ -914,7 +919,7 @@ body.light-theme .header {
     border: 3px solid var(--text-main);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 6px 6px 0px var(--color-accent-maroon);
+    box-shadow: 6px 6px 0px var(--shadow-color);
     display: flex;
     flex-direction: column;
     transition: all var(--transition-speed) ease;
@@ -923,7 +928,7 @@ body.light-theme .header {
 .project-card:hover {
     transform: translate(-4px, -4px);
     border-color: var(--color-primary);
-    box-shadow: 10px 10px 0px var(--color-primary);
+    box-shadow: 10px 10px 0px var(--shadow-color-hover);
 }
 
 .project-thumbnail {
