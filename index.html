@@ -675,13 +675,10 @@
         <!-- Chat Window Console -->
         <div id="chat-window" class="glass-card chat-window window-console">
             <div class="window-header">
-                <div class="window-dots">
-                    <span id="chat-close" class="dot red" role="button" tabindex="0" title="Close" aria-label="Close Chat"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                </div>
                 <span class="window-title">mochi.js 🍡</span>
-                <div class="window-spacer"></div>
+                <button id="chat-close" class="chat-close-btn" aria-label="Close Chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
             <div class="window-body chat-body">
                 <div class="chat-messages" id="chat-messages">
