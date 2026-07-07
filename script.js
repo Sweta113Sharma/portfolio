@@ -389,6 +389,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function respondToUser(query) {
         let response = "";
+        
+        // Match cheerful greetings
+        if (query === 'hi' || query === 'hello' || query === 'hey' || query === 'hola' || query === 'yo' || query.startsWith('hi ') || query.startsWith('hello ')) {
+            const greetings = [
+                "Konnichiwa! Hello! Sweta is super happy you're here! 🌸✨ How can I help you today?",
+                "Hey there! Super cheerful hello from Mochi.js! 🍡🤖 Hope your day is going fantastic!",
+                "Aloha! 🌟 Welcome to Sweta's space! I'm ready to chat. What's on your mind?"
+            ];
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            
+            const facts = [
+                "<strong>Fun fact</strong>: Sweta is currently learning Japanese and has propagated over 10 different pothos plants around her room! 🇯🇵🌱",
+                "<strong>Fun fact</strong>: Sweta's hackathon team (Ctrl+Alt+Diablo) built a full blockchain &amp; AI authenticator called Attestr in under 36 hours! 🛡️🔗",
+                "<strong>Fun fact</strong>: Sweta can write full-stack API routers in Python and debug JavaScript layouts, all powered by a single cup of Boba Tea! 🧋✨"
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            
+            addBotMessage(randomGreeting);
+            setTimeout(() => {
+                addBotMessage(randomFact);
+            }, 800); // 800ms delay to simulate typing the fun fact!
+            return;
+        }
+
         if (query.includes('skill') || query.includes('languages') || query.includes('tool') || query === 'skills') {
             response = "Sweta specializes in <strong>Frontend</strong> (React, TS, Tailwind), <strong>Backend</strong> (Flask, Python, SQLite), and <strong>AI &amp; ML</strong> (LLM APIs, OpenRouter, Prompt Engineering)! 💻";
         } else if (query.includes('project') || query.includes('build') || query === 'projects' || query.includes('work')) {
