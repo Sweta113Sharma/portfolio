@@ -2083,3 +2083,7 @@ body.light-theme .header {
     transform: translate(-1px, -1px);
     box-shadow: 3px 3px 0px var(--border-color);
 }
+
+.chat-close-btn i {
+    pointer-events: none;
+}
