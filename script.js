@@ -309,4 +309,101 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* -----------------------------------------
+       8. CHATBOT WIDGET
+       ----------------------------------------- */
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const chatClose = document.getElementById('chat-close');
+    const chatSend = document.getElementById('chat-send');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatBadge = chatToggle ? chatToggle.querySelector('.chat-badge') : null;
+    const chatOptions = document.querySelectorAll('.chat-opt-btn');
+
+    if (chatToggle && chatWindow) {
+        // Toggle Chat Window
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('active');
+            if (chatWindow.classList.contains('active') && chatBadge) {
+                chatBadge.style.display = 'none'; // Hide badge once opened
+            }
+        });
+
+        // Close Chat Window
+        if (chatClose) {
+            chatClose.addEventListener('click', () => {
+                chatWindow.classList.remove('active');
+            });
+        }
+
+        // Handle Quick Option Clicks
+        chatOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                const query = opt.getAttribute('data-query');
+                const label = opt.textContent;
+                addUserMessage(label);
+                setTimeout(() => {
+                    respondToUser(query);
+                }, 600);
+            });
+        });
+
+        // Handle Input Submit
+        const submitInput = () => {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            addUserMessage(text);
+            chatInput.value = '';
+            setTimeout(() => {
+                respondToUser(text.toLowerCase());
+            }, 600);
+        };
+
+        if (chatSend) {
+            chatSend.addEventListener('click', submitInput);
+        }
+        if (chatInput) {
+            chatInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') submitInput();
+            });
+        }
+    }
+
+    function addUserMessage(text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-msg user';
+        msgDiv.innerHTML = `<p>${text}</p>`;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function addBotMessage(text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-msg bot';
+        msgDiv.innerHTML = `<p>${text}</p>`;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function respondToUser(query) {
+        let response = "";
+        if (query.includes('skill') || query.includes('languages') || query.includes('tool') || query === 'skills') {
+            response = "Sweta specializes in <strong>Frontend</strong> (React, TS, Tailwind), <strong>Backend</strong> (Flask, Python, SQLite), and <strong>AI &amp; ML</strong> (LLM APIs, OpenRouter, Prompt Engineering)! 💻";
+        } else if (query.includes('project') || query.includes('build') || query === 'projects' || query.includes('work')) {
+            response = "She has built some amazing stuff! 🚀<br><br>• <strong>Attestr</strong>: Decentralized media authenticator (Solidity &amp; AI deepfake detection).<br>• <strong>StudyNest</strong>: AI-powered university syllabus milestones manager.<br>• <strong>CodeAlpha Chatbot</strong>: Intelligent chatbot assistant.";
+        } else if (query.includes('plant') || query.includes('mom') || query === 'plants' || query.includes('hobby')) {
+            response = "Yes! Sweta is a certified <strong>Plant Mom</strong> 🌱. She propagates pothos and maintains indoor ivy partition walls to keep her workspace fresh!";
+        } else if (query.includes('contact') || query.includes('hire') || query.includes('email') || query === 'contact' || query.includes('social')) {
+            response = "You can reach Sweta at <a href='mailto:sweta.dollysharma@gmail.com' class='email-link'>sweta.dollysharma@gmail.com</a> or connect on LinkedIn at <a href='https://www.linkedin.com/in/swetasharmaa/' target='_blank' rel='noopener noreferrer'>swetasharmaa</a>! 📬";
+        } else if (query.includes('college') || query.includes('noida') || query.includes('niet') || query.includes('education') || query.includes('study')) {
+            response = "Sweta is studying at the <strong>Noida Institute of Engineering and Technology (NIET)</strong>, pursuing an <strong>Integrated Degree in Computer Science</strong>! 🎓";
+        } else if (query.includes('solidity') || query.includes('blockchain') || query.includes('attestr') || query.includes('diablo') || query.includes('hackathon')) {
+            response = "At the <strong>Innovate Bharat Hackathon 2026</strong>, Sweta's team (Ctrl+Alt+Diablo) built <strong>Attestr</strong>—a decentralized media authenticator using Solidity smart contracts and AI deepfake detection! 🛡️🔗";
+        } else {
+            response = "I'm a simple assistant, but I'd love to help! Ask me about Sweta's <strong>skills</strong>, <strong>projects</strong>, <strong>college</strong>, or her plants! 🤖🌱";
+        }
+        addBotMessage(response);
+    }
 });

@@ -664,6 +664,45 @@
         </div>
     </footer>
 
+    <!-- Floating Chatbot Widget -->
+    <div class="chatbot-container">
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle-btn" aria-label="Open Chat Assistant">
+            <i class="fa-solid fa-robot"></i>
+            <span class="chat-badge">1</span>
+        </button>
+
+        <!-- Chat Window Console -->
+        <div id="chat-window" class="glass-card chat-window window-console">
+            <div class="window-header">
+                <span class="window-title">C:\SWETA\bot.exe</span>
+                <div class="window-controls">
+                    <button id="chat-close" class="window-btn close">X</button>
+                </div>
+            </div>
+            <div class="window-body chat-body">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-msg bot">
+                        <p>Hi! I'm Sweta's helper bot. Ask me anything about her projects, skills, or plants! 🤖🌱</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Options -->
+                <div class="chat-options">
+                    <button class="chat-opt-btn" data-query="skills">skills</button>
+                    <button class="chat-opt-btn" data-query="projects">projects</button>
+                    <button class="chat-opt-btn" data-query="plants">plants</button>
+                    <button class="chat-opt-btn" data-query="contact">hire her</button>
+                </div>
+
+                <div class="chat-input-bar">
+                    <input type="text" id="chat-input" placeholder="Type a message..." aria-label="Chat message input">
+                    <button id="chat-send" class="chat-send-btn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Form Success Modal -->
     <div id="success-modal" class="modal-overlay">
         <div class="glass-card modal-content">
