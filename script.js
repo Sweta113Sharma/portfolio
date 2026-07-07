@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const words = [
         "Full Stack Wizard 🧙‍♀️",
         "AI Prompt Whisperer 🤖",
+        "Cloud Tech Explorer ☁️",
         "Boba Tea Powered Coder 🧋",
         "Aesthetic Web Artisan ✨",
         "Problem Solver 🧩"
