@@ -2062,13 +2062,13 @@ body.light-theme .header {
 }
 
 .chat-close-btn {
-    background: transparent;
+    background: #ff5f56; /* Cute red background */
     border: 2px solid var(--border-color);
-    color: var(--text-inverse);
-    font-size: 0.95rem;
+    color: #ffffff; /* White cross icon */
+    font-size: 0.75rem;
     width: 24px;
     height: 24px;
-    border-radius: 6px;
+    border-radius: 50%; /* Circular button */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2078,8 +2078,7 @@ body.light-theme .header {
 }
 
 .chat-close-btn:hover {
-    background: #ff5f56;
-    color: #ffffff;
+    background: #ff3b30; /* Darker red on hover */
     transform: translate(-1px, -1px);
     box-shadow: 3px 3px 0px var(--border-color);
 }
