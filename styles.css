@@ -1928,9 +1928,12 @@ body.light-theme .header {
     height: 480px;
     display: none; /* Controlled by JS */
     flex-direction: column;
-    box-shadow: 8px 8px 0px var(--border-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
     opacity: 0;
     transform: scale(0.8) translateY(20px);
+    border-radius: var(--border-radius) !important;
+    overflow: hidden;
+    border: 3px solid var(--border-color) !important;
 }
 
 .chat-window.active {
@@ -2091,9 +2094,7 @@ button.dot:hover {
 }
 
 .window-dots .dot.red { background-color: #ff5f56; }
-.window-dots .dot.yellow { background-color: #ffbd2e; }
-.window-dots .dot.green { background-color: #27c93f; }
 
 .window-spacer {
-    width: 54px; /* Matches width of window-dots to center title */
+    width: 12px; /* Matches width of single red close dot to center title */
 }
