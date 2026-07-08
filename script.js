@@ -322,21 +322,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chat-messages');
     const chatBadge = chatToggle ? chatToggle.querySelector('.chat-badge') : null;
     const chatOptions = document.querySelectorAll('.chat-opt-btn');
-
+    const chatTooltip = document.getElementById('chat-tooltip');
+ 
     if (chatToggle && chatWindow) {
         // Toggle Chat Window
         chatToggle.addEventListener('click', () => {
             chatWindow.classList.toggle('active');
-            if (chatWindow.classList.contains('active') && chatBadge) {
-                chatBadge.style.display = 'none'; // Hide badge once opened
+            if (chatWindow.classList.contains('active')) {
+                if (chatBadge) chatBadge.style.display = 'none'; // Hide badge once opened
+                if (chatTooltip) {
+                    chatTooltip.classList.remove('show');
+                    chatTooltip.classList.add('hidden');
+                }
             }
         });
-
+ 
         // Close Chat Window
         if (chatClose) {
             chatClose.addEventListener('click', () => {
                 chatWindow.classList.remove('active');
+                if (chatTooltip) {
+                    chatTooltip.classList.remove('show');
+                    chatTooltip.classList.add('hidden');
+                }
             });
+        }
+
+        // Click tooltip to open chat window
+        if (chatTooltip) {
+            chatTooltip.addEventListener('click', () => {
+                chatWindow.classList.add('active');
+                chatTooltip.classList.remove('show');
+                chatTooltip.classList.add('hidden');
+                if (chatBadge) chatBadge.style.display = 'none';
+            });
+        }
+
+        // Show attention grabber after 2.5s delay
+        if (chatTooltip) {
+            setTimeout(() => {
+                if (!chatWindow.classList.contains('active') && !chatTooltip.classList.contains('hidden')) {
+                    chatTooltip.classList.add('show');
+                }
+            }, 2500);
         }
 
         // Handle Quick Option Clicks
