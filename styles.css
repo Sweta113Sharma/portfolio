@@ -1699,6 +1699,7 @@ body.light-theme .header {
     transform: rotate(-7deg);
     font-size: 2.5rem;
     color: var(--text-main);
+    animation: float-note-new 4.2s ease-in-out infinite;
 }
 
 .note-tour-guide {
@@ -1708,6 +1709,7 @@ body.light-theme .header {
     transform: rotate(5deg);
     font-size: 2.2rem;
     color: var(--text-main);
+    animation: float-note-tour 4.8s ease-in-out infinite;
 }
 
 .note-this-is-me {
@@ -1717,6 +1719,25 @@ body.light-theme .header {
     transform: rotate(12deg);
     font-size: 2.4rem;
     color: var(--color-primary);
+    animation: float-note-me 3.8s ease-in-out infinite;
+}
+
+@keyframes float-note-new {
+    0% { transform: translateY(0) rotate(-7deg); }
+    50% { transform: translateY(-8px) rotate(-4deg); }
+    100% { transform: translateY(0) rotate(-7deg); }
+}
+
+@keyframes float-note-tour {
+    0% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-6px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(5deg); }
+}
+
+@keyframes float-note-me {
+    0% { transform: translateY(0) rotate(12deg); }
+    50% { transform: translateY(-7px) rotate(14deg); }
+    100% { transform: translateY(0) rotate(12deg); }
 }
 
 /* ==========================================================================
@@ -1879,6 +1900,17 @@ body.light-theme .header {
     right: 30px;
     z-index: 999;
     font-family: var(--font-body);
+}
+
+.chat-button-wrapper {
+    position: relative;
+    animation: float-chatbot-widget 4s ease-in-out infinite;
+}
+
+@keyframes float-chatbot-widget {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+    100% { transform: translateY(0); }
 }
 
 .chat-tooltip {
