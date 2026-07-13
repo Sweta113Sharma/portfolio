@@ -962,23 +962,28 @@ body.light-theme .header {
 
 /* Attestr Art */
 .art-attestr {
-    background: radial-gradient(circle at center, var(--color-primary-glow), transparent 70%);
+    background: #F7F5F0 !important; /* Always light cream backdrop for visibility */
 }
-.art-shield-ring {
+.art-attestr .artwork-icon {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important; /* Solid black logo */
+}
+.art-attestr .art-shield-ring {
     position: absolute;
     width: 140px;
     height: 140px;
-    border: 2px dashed var(--color-primary);
+    border: 2px dashed #000000 !important; /* Solid black ring */
     border-radius: 50%;
     animation: rotate 15s linear infinite;
     opacity: 0.4;
 }
-.art-scanner-line {
+.art-attestr .art-scanner-line {
     position: absolute;
     width: 100%;
     height: 3px;
-    background: var(--color-secondary);
-    box-shadow: 0 0 10px var(--color-secondary);
+    background: #000000 !important; /* Solid black scanner line */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
     animation: scan 4s ease-in-out infinite;
 }
 
