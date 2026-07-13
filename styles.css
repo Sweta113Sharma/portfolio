@@ -1070,6 +1070,18 @@ body.light-theme .header {
     animation: pingPong 3s ease-in-out infinite alternate;
 }
 
+/* Prodigy QA Art */
+.art-prodigy .art-test-ticks {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
 .project-info {
     padding: 25px;
     display: flex;
