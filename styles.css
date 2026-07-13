@@ -1463,6 +1463,7 @@ body.light-theme .header {
     border-top: 1px solid var(--border-color);
     width: 100%;
     padding-top: 20px;
+    text-align: center;
 }
 
 /* ==========================================================================
