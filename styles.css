@@ -1687,7 +1687,7 @@ body.light-theme .header {
 
 .note-new-here {
     position: absolute;
-    top: 50px;
+    top: 120px;
     left: 5%;
     transform: rotate(-7deg);
     font-size: 2.5rem;
