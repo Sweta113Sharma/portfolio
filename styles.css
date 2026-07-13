@@ -33,6 +33,7 @@
     --transition-speed: 0.3s;
     --border-radius: 40px;       /* Bubbly Card Corners */
     --max-width: 1200px;
+    --header-bg: rgba(247, 245, 240, 0.75);
 }
 
 /* Dark Theme Variables (Toggled) */
@@ -40,6 +41,7 @@ body.dark-theme {
     --bg-primary: #181614;       /* Deep Espresso Black Background */
     --bg-secondary: #23201D;     /* Slightly Lighter Dark Espresso */
     --bg-surface: #2C2825;       /* Warm Charcoal Brown for Polaroid-like Cards */
+    --header-bg: rgba(44, 40, 37, 0.75);
     
     --color-primary: #E273A8;    /* Bubbly Neon Hot Pink */
     --color-primary-glow: rgba(226, 115, 168, 0.25);
@@ -277,9 +279,9 @@ body.light-theme .grid-overlay {
     width: 90%;
     max-width: var(--max-width);
     height: 70px;
-    background: var(--bg-surface);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 3px solid var(--text-main);
     border-radius: 99px; /* Bubbly Header capsule */
     display: flex;
