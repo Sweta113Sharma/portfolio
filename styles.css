@@ -947,52 +947,43 @@ body.light-theme .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: #F7F5F0 !important; /* Unified cream backdrop for all project logos */
     overflow: hidden;
 }
 
 .artwork-icon {
     font-size: 3.5rem;
     z-index: 2;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important; /* Solid black icons */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
 /* Attestr Art */
-.art-attestr {
-    background: #F7F5F0 !important; /* Always light cream backdrop for visibility */
-}
-.art-attestr .artwork-icon {
-    background: none !important;
-    -webkit-text-fill-color: initial !important;
-    color: #000000 !important; /* Solid black logo */
-}
 .art-attestr .art-shield-ring {
     position: absolute;
     width: 140px;
     height: 140px;
-    border: 2px dashed #000000 !important; /* Solid black ring */
+    border: 2px dashed #000000 !important;
     border-radius: 50%;
     animation: rotate 15s linear infinite;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 .art-attestr .art-scanner-line {
     position: absolute;
     width: 100%;
     height: 3px;
-    background: #000000 !important; /* Solid black scanner line */
+    background: #000000 !important;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
     animation: scan 4s ease-in-out infinite;
 }
 
-.art-studynest {
-    background: radial-gradient(circle at top right, var(--color-primary-glow), transparent 60%);
-}
+/* StudyNest Art */
 .art-studynest .art-ring {
     position: absolute;
-    border: 2px solid var(--color-primary-glow);
+    border: 2px solid rgba(0, 0, 0, 0.2) !important;
     border-radius: 50%;
     animation: rotate 20s linear infinite;
 }
@@ -1006,7 +997,7 @@ body.light-theme .header {
 }
 .art-studynest .art-bars span {
     width: 6px;
-    background-color: var(--color-secondary);
+    background-color: #000000 !important;
     border-radius: 3px;
     animation: barPulse 1.5s ease-in-out infinite alternate;
 }
@@ -1014,14 +1005,12 @@ body.light-theme .header {
 .art-studynest .art-bars span:nth-child(2) { height: 50px; animation-delay: 0.4s; }
 .art-studynest .art-bars span:nth-child(3) { height: 25px; animation-delay: 0.7s; }
 
-.art-chatbot {
-    background: radial-gradient(circle at bottom left, var(--color-secondary-glow), transparent 65%);
-}
+/* Chatbot Art */
 .art-chatbot .art-pulse {
     position: absolute;
     width: 90px;
     height: 90px;
-    border: 1px solid var(--color-secondary);
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
     border-radius: 50%;
     animation: ripple 2s infinite;
     opacity: 0;
@@ -1030,16 +1019,14 @@ body.light-theme .header {
     position: absolute;
     width: 90px;
     height: 90px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
     border-radius: 50%;
     animation: ripple 2s infinite;
     animation-delay: 1s;
     opacity: 0;
 }
 
-.art-redundancy {
-    background: radial-gradient(circle at bottom right, var(--color-primary-glow), transparent 70%);
-}
+/* Redundancy Art */
 .art-redundancy .art-nodes {
     position: absolute;
     width: 80%;
@@ -1052,25 +1039,23 @@ body.light-theme .header {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: var(--text-muted);
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .art-redundancy .node.active {
-    background-color: var(--color-secondary);
-    box-shadow: 0 0 10px var(--color-secondary);
+    background-color: #000000 !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
 }
 .art-redundancy .node.duplicate {
-    background-color: hsl(0, 80%, 55%);
+    background-color: #000000 !important;
     text-decoration: line-through;
     animation: shrinkNode 2s infinite alternate;
 }
 
-.art-match {
-    background: radial-gradient(circle at top left, var(--color-primary-glow), transparent 60%);
-}
+/* Match Art */
 .art-match .art-arrows {
     position: absolute;
     font-size: 2.2rem;
-    color: var(--color-primary-glow);
+    color: rgba(0, 0, 0, 0.25) !important;
     animation: pingPong 3s ease-in-out infinite alternate;
 }
 
