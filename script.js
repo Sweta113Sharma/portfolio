@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (query.includes('skill') || query.includes('languages') || query.includes('tool') || query === 'skills') {
             response = "Sweta specializes in <strong>Frontend</strong> (React, TS, Tailwind), <strong>Backend</strong> (Flask, Python, SQLite), and <strong>AI &amp; ML</strong> (LLM APIs, OpenRouter, Prompt Engineering)! 💻";
         } else if (query.includes('project') || query.includes('build') || query === 'projects' || query.includes('work')) {
-            response = "She has built some amazing stuff! 🚀<br><br>• <strong>Attestr</strong>: Decentralized media authenticator (Solidity &amp; AI deepfake detection).<br>• <strong>StudyNest</strong>: AI-powered university syllabus milestones manager.<br>• <strong>CodeAlpha Chatbot</strong>: Intelligent chatbot assistant.";
+            response = "She has built some amazing stuff! 🚀<br><br>• <strong>Attestr</strong>: Decentralized media provenance ledger (Solidity &amp; AI forensics).<br>• <strong>StudyNest</strong>: AI-powered university syllabus milestones manager.<br>• <strong>AlphaBot</strong>: Retrieval-based student assistant for CodeAlpha (Flask &amp; SQLite3).";
         } else if (query.includes('plant') || query.includes('mom') || query === 'plants' || query.includes('hobby')) {
             response = "Yes! Sweta is a certified <strong>Plant Mom</strong> 🌱. She propagates pothos and maintains indoor ivy partition walls to keep her workspace fresh!";
         } else if (query.includes('contact') || query.includes('hire') || query.includes('email') || query === 'contact' || query.includes('social')) {
