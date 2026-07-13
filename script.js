@@ -444,7 +444,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (query.includes('college') || query.includes('noida') || query.includes('niet') || query.includes('education') || query.includes('study')) {
             response = "Sweta is studying at the <strong>Noida Institute of Engineering and Technology (NIET)</strong>, pursuing an <strong>Integrated Degree in Computer Science</strong>! 🎓";
         } else if (query.includes('solidity') || query.includes('blockchain') || query.includes('attestr') || query.includes('diablo') || query.includes('hackathon')) {
-            response = "At the <strong>Innovate Bharat Hackathon 2026</strong>, Sweta's team (Ctrl+Alt+Diablo) built <strong>Attestr</strong>—a decentralized media authenticator using Solidity smart contracts and AI deepfake detection! 🛡️🔗";
+            response = "At the <strong>Innovate Bharat Hackathon 2026</strong>, Sweta's team (Ctrl+Alt+Diablo) built <strong>Attestr</strong>—a decentralized media provenance system! 🛡️🔗<br><br>" +
+                       "• <strong>On-Chain Proof</strong>: Stores SHA-256 and perceptual dHashes via a Solidity contract (<code>MediaRegistry.sol</code>) on Sepolia testnet.<br>" +
+                       "• <strong>AI Forensics</strong>: Runs 7-signal forensic metadata analysis and Error Level Analysis (ELA) to detect visual tampering.<br>" +
+                       "• <strong>ML Models</strong>: Leverages Vision Transformers (ViT) and ResNet via the Hugging Face Inference API.<br>" +
+                       "• <strong>Tech Stack</strong>: React 19, Solidity, Node/Express, Three.js, and Firebase Auth.";
         } else {
             response = "I'm Mochi.js, a simple assistant, but I'd love to help! Ask me about Sweta's <strong>skills</strong>, <strong>projects</strong>, <strong>college</strong>, or her plants! 🍡🤖";
         }
