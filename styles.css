@@ -412,6 +412,11 @@ body.light-theme .header {
 
 .about.section-padding {
     padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.skills.section-padding {
+    padding-top: 40px;
 }
 
 .hero-content {
