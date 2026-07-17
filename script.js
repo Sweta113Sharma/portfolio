@@ -449,6 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
                        "• <strong>AI Forensics</strong>: Runs 7-signal forensic metadata analysis and Error Level Analysis (ELA) to detect visual tampering.<br>" +
                        "• <strong>ML Models</strong>: Leverages Vision Transformers (ViT) and ResNet via the Hugging Face Inference API.<br>" +
                        "• <strong>Tech Stack</strong>: React 19, Solidity, Node/Express, Three.js, and Firebase Auth.";
+        } else if (query.includes('certif') || query.includes('credential') || query.includes('nasscom') || query.includes('award') || query === 'certifications') {
+            response = "Sweta recently earned a <strong>Gold Certification in Gen AI 101</strong> from <strong>NASSCOM FutureSkills Prime</strong>, validating her foundation in Generative AI architectures, prompting, and deep engineering! 🏆✨";
         } else {
             response = "I'm Mochi.js, a simple assistant, but I'd love to help! Ask me about Sweta's <strong>skills</strong>, <strong>projects</strong>, <strong>college</strong>, or her plants! 🍡🤖";
         }
